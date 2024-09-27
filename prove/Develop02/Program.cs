@@ -39,7 +39,6 @@ public class Program
 
     static void WriteNewEntry()
     {
-        // Get a random prompt from the PromptGenerator
         string prompt = promptGenerator.GetRandomPrompt();
         Console.WriteLine(prompt);
         string response = Console.ReadLine();
