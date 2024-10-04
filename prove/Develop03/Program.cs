@@ -2,41 +2,23 @@ using System;
 
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        // Create a reference for the scripture
-        var reference = new Reference("John", 3, 16);
+        // Create a Scripture with a reference and text
+        Scripture scripture = new Scripture(new Reference("Proverbs", 3, 5, 6), "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.");
 
-        // Create the scripture using the reference and text
-        var scriptureText = "For God so loved the world, that he gave his only begotten Son, " +
-                            "that whosoever believeth in him should not perish, but have everlasting life.";
-        var scripture = new Scripture(reference, scriptureText);
-
-        // Main loop to keep displaying the scripture and hiding words
-        while (true)
+        while (!scripture.IsCompletelyHidden())
         {
-            // Display the current state of the scripture
+            Console.Clear();
             scripture.Display();
+            
+            Console.WriteLine("\nPress Enter to hide words or type 'quit' to exit.");
+            string input = Console.ReadLine();
+            if (input.ToLower() == "quit") break;
 
-            // Check if all words are hidden
-            if (scripture.IsCompletelyHidden())
-            {
-                Console.WriteLine("All words have been hidden! Press Enter to quit.");
-                Console.ReadLine();
-                break;
-            }
-
-            // Ask user for input to continue or quit
-            Console.WriteLine("Press Enter to hide more words or type 'quit' to exit.");
-            var input = Console.ReadLine();
-
-            if (input.ToLower() == "quit")
-            {
-                break;
-            }
-
-            // Hide random words
             scripture.HideRandomWords();
         }
+
+        Console.WriteLine("All words are hidden! Program ended.");
     }
 }
