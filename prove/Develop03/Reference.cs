@@ -20,7 +20,7 @@ class Reference
         _startVerse = startVerse;
         _endVerse = endVerse;
     }
-
+    
     public string GetDisplayText()
     {
         if (_startVerse == _endVerse)
