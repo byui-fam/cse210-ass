@@ -34,8 +34,6 @@ public class Fraction
 
     public double GetDecimalValue()
     {
-        // Notice that this is not stored as a member variable.
-        // Is will be recomputed each time this is called.
         return (double)_top / (double)_bottom;
     }
 }
