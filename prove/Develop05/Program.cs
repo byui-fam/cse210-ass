@@ -44,3 +44,5 @@ class Program
         }
     }
 }
+
+//Added visualization activity class: This helps the user to picture a scene in detail, focusing on their senses and emotions bycreating a mental exercise.
