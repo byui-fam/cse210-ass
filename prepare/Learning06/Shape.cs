@@ -14,7 +14,6 @@ public class Shape
 
     public virtual float GetArea()
     {
-        // Default implementation, can be overridden
         return 0;
     }
 }
