@@ -1,3 +1,4 @@
+using System;
 public class ReflectingActivity : MindfulnessActivity
 {
     private List<string> _prompts;

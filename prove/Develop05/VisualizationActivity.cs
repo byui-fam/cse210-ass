@@ -1,3 +1,4 @@
+using System;
 public class VisualizationActivity : MindfulnessActivity
 {
     private List<string> _visualizationPrompts;

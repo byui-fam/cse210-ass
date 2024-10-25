@@ -1,3 +1,4 @@
+using System;
 public class BreathingActivity : MindfulnessActivity
 {
     public BreathingActivity() : base("Breathing Activity", "Focus on your breathing to relax your mind and body.")
